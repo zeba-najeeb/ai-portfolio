@@ -7,16 +7,19 @@
 <p align="left">
   📍 <b>Location:</b> Sharjah / Dubai, United Arab Emirates<br>
   💼 <b>Current Role:</b> AI Solutions Architect & Developer at Unique Computer Systems (UCS)<br>
+  🚀 <b>Live Flagship AI App:</b> <a href="https://zeba-ai-job-hunter.streamlit.app"><b>Autonomous AI Job Hunter & RAG Career Co-Pilot</b></a><br>
   📫 <b>Contact:</b> <a href="mailto:zebarishab@gmail.com">zebarishab@gmail.com</a> |
-  <a href="https://www.linkedin.com/in/zeba-najeeb">LinkedIn Profile</a>
+  <a href="https://www.linkedin.com/in/zeba-najeeb">LinkedIn Profile</a> |
+  <a href="https://github.com/zeba-najeeb">GitHub Profile</a>
 </p>
 
 <p align="left">
+  <a href="https://zeba-ai-job-hunter.streamlit.app"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Live App on Streamlit"></a>
   <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-Async%20REST-009688?logo=fastapi&logoColor=white" alt="FastAPI"></a>
   <a href="https://ai.google.dev/"><img src="https://img.shields.io/badge/LLMs-Google%20Gemini-8E75C2?logo=google&logoColor=white" alt="Google Gemini"></a>
   <a href="https://www.langchain.com/"><img src="https://img.shields.io/badge/Orchestration-LangChain%20%7C%20LangGraph-1C3C3C?logo=langchain&logoColor=white" alt="LangChain and LangGraph"></a>
   <a href="https://www.trychroma.com/"><img src="https://img.shields.io/badge/Vector%20DB-ChromaDB-blue" alt="ChromaDB"></a>
-  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
   <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Containers-Docker-2496ED?logo=docker&logoColor=white" alt="Docker"></a>
 </p>
 
@@ -71,14 +74,31 @@ Skilled in LLM prompt engineering, structured output validation, vector search o
 
 ---
 
+## 🚀 Flagship Open-Source AI Platform (Live Cloud Demo)
+
+### 🎯 Autonomous AI Job Hunter & RAG Career Co-Pilot
+
+- **Live Cloud Application:** **[zeba-ai-job-hunter.streamlit.app](https://zeba-ai-job-hunter.streamlit.app)**
+- **Source Code Repository:** **[github.com/zeba-najeeb/autonomous-ai-job-hunter](https://github.com/zeba-najeeb/autonomous-ai-job-hunter)**
+- **Core Stack:** Python 3.12, Google Gemini 2.5 API & Embeddings (`3072-dim`), ChromaDB, PyMuPDF, SQLite, Pydantic v2, Streamlit
+
+#### Architectural Highlights
+- **Multi-Tenant Ephemeral Vector Store (`ChromaDB`):** Parses any candidate PDF resume into overlapping semantic chunks (`chunk_size=800`, `overlap=150`) with strict `candidate_id` tenant isolation and an automated **7-day sliding inactivity TTL** to maintain near-zero cloud disk usage.
+- **Stateful Portal Queue & Smart Discovery Adapter:** Recommends regional job portals for any target city/country, persists progression (`PENDING` → `IN_PROGRESS` → `COMPLETED`) in SQLite, and routes discovery across Google Search Index Grounding and Open APIs.
+- **2-Stage Quality Gate (`<= 30 Days` + Global Deduplication):** Normalizes relative timestamps to filter out expired listings older than 30 days and computes deterministic SHA-256 job fingerprints (`company + normalized_title`) to prevent cross-portal duplicates.
+- **RAG Semantic Scoring & On-Demand Co-Pilot (`>= 70%` Gate):** Evaluates active openings against retrieved CV chunks (`0–100%` score + skill gap analysis) and unlocks a 4-tab Career Co-Pilot (Zero-Hallucination ATS CV Bullets, Tailored Cover Letter, Skill-Gap Roadmap, and CV-Grounded Interview Q&A).
+
+---
+
 ## 🛠️ Open-Source AI Systems & Engineering Projects
 
-| Project | Technology Stack | Key Highlights | Repository |
+| Project | Technology Stack | Key Highlights | Links |
 |---|---|---|---|
-| **Autonomous AI Job Hunter** *(Flagship Capstone)* | LangGraph, ChromaDB, Gemini API, FastAPI, Playwright | Multi-agent workflow for job discovery, semantic CV-to-job matching, and dynamic cover letter generation. | In Progress |
-| **Enterprise RAG Knowledge Assistant** | LangChain, ChromaDB, Llama, FastAPI | RAG pipeline with document chunking, conversational history, retrieval, and hallucination-reduction techniques. | [Explore Repository](https://github.com/123zeba/ai-business-assistant) |
-| **Agentic Decision Workflows** | LangGraph, Python, Tool Calling, StateGraph | Stateful agent workflows with conditional branching, human-in-the-loop review, and iterative retrieval. | [Explore Repository](https://github.com/123zeba/Langgraph1) |
-| **Dubai Real Estate Valuation Engine** | Python, Scikit-learn, Pandas, XGBoost | Machine learning project for estimating property prices across Dubai communities. | [Explore Repository](https://github.com/123zeba/Dubai_Apartment_Price-Prediction) |
+| **Autonomous AI Job Hunter & RAG Co-Pilot** *(Flagship)* | Gemini 2.5, ChromaDB, PyMuPDF, SQLite, Pydantic v2, Streamlit | Multi-tenant RAG job matcher (`0–100%`), stateful portal queue, `<=30d` freshness gate, and 4-tab AI Career Co-Pilot. | [🚀 Live App](https://zeba-ai-job-hunter.streamlit.app) • [📦 GitHub](https://github.com/zeba-najeeb/autonomous-ai-job-hunter) |
+| **Enterprise RAG Knowledge Assistant** | LangChain, ChromaDB, Llama 3, FastAPI | RAG pipeline with document chunking, conversational history, retrieval, and hallucination-reduction techniques. | [Explore Repository](https://github.com/zeba-najeeb/ai-business-assistant) |
+| **Agentic Decision Workflows** | LangGraph, Python, Tool Calling, StateGraph | Stateful agent workflows with conditional branching, human-in-the-loop review, and iterative retrieval. | [Explore Repository](https://github.com/zeba-najeeb/Langgraph1) |
+| **AI Python Tutor & Interactive Chatbot** | Python, LLMs, Prompt Engineering, Gradio/UI | Context-aware coding mentor designed to explain concepts, debug code, and guide learners interactively. | [Explore Repository](https://github.com/zeba-najeeb/python-tutor-chatbot) |
+| **Dubai Real Estate Valuation Engine** | Python, Scikit-learn, Pandas, XGBoost | Machine learning project for estimating property prices across Dubai communities. | [Explore Repository](https://github.com/zeba-najeeb/Dubai_Apartment_Price-Prediction) |
 
 ---
 
